@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+
+  db:
+    image: mysql:5.7
+    container_name: komodo-db
+    restart: always
+    env_file: 
+      - ./.env
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
+    labels:
+      - "traefik.enable=false"
+    networks:
+      - komodo_internal
+    ports:
+      - 3306:3306
+
+networks:
+  proxy:
+    external: true
+  komodo_internal:
+    external: true
