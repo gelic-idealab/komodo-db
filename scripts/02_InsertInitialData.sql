@@ -17,6 +17,4 @@ VALUES (2020, 'Spring'),
        (2020, 'Fall'),
        (2021, 'Spring');
 
--- INSERT INTO KP_Course (course_no, course_name, department, instructor_id, semester_id)
--- VALUES ('KMD100', 'Komodo Testing', 'IDEA Lab Dev Studio', 2, 1),
---        ('KMD101', 'Komodo Tutorials', 'IDEA Lab Dev Studio', 2, 2);
+

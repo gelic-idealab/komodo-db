@@ -1,3 +1,4 @@
+-- Portal tables
 CREATE TABLE `KP_Role` (
     `role_id`  tinyint NOT NULL AUTO_INCREMENT,
     `role_name` varchar(20),
@@ -116,4 +117,20 @@ CREATE TABLE `KP_Interactions`(
     `target_id` int NOT NULL,
     `type` varchar(255) NOT NULL,
     `count` int not NULL
+);
+
+-- data pipeline tables
+CREATE TABLE `connections` (
+    `timestamp` bigint NOT NULL,
+    `session_id` int NOT NULL,
+    `client_id` int NOT NULL,
+    `event` varchar(255) NOT NULL
+);
+
+CREATE TABLE `captures` (
+    `capture_id` varchar(255) NOT NULL,
+    `session_id` int NOT NULL,
+    `start` bigint NOT NULL,
+    `end` bigint,
+    `processed` bigint
 );
