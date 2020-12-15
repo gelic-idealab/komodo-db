@@ -120,6 +120,12 @@ CREATE TABLE `KP_Interactions`(
 );
 
 -- data pipeline tables
+CREATE TABLE `interaction_types` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `type` varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE `connections` (
     `timestamp` bigint NOT NULL,
     `session_id` int NOT NULL,
