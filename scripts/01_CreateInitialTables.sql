@@ -120,6 +120,18 @@ CREATE TABLE `KP_Interactions`(
 );
 
 -- data pipeline tables
+
+CREATE TABLE `interactions` (
+  `seq` int(11) DEFAULT NULL,
+  `session_id` int(11) DEFAULT NULL,
+  `client_id` int(11) DEFAULT NULL,
+  `source_id` int(11) DEFAULT NULL,
+  `target_id` int(11) DEFAULT NULL,
+  `interaction_type` int(11) DEFAULT NULL,
+  `global_seq` int(11) DEFAULT NULL,
+  `capture_id` text
+);
+
 CREATE TABLE `interaction_types` (
     `id` int NOT NULL AUTO_INCREMENT,
     `type` varchar(255) NOT NULL,
