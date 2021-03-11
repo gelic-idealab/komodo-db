@@ -150,5 +150,5 @@ CREATE TABLE `captures` (
     `session_id` int NOT NULL,
     `start` bigint NOT NULL,
     `end` bigint,
-    `processed` bigint
+    `processed` bigint DEFAULT NULL
 );
