@@ -161,7 +161,8 @@ CREATE TABLE `positions` (
   `posx` float DEFAULT NULL,
   `posy` float DEFAULT NULL,
   `posz` float DEFAULT NULL,
-  `global_seq` float DEFAULT NULL
+  `global_seq` float DEFAULT NULL,
+  `capture_id` text
 );
 
 CREATE TABLE `interactions` (
