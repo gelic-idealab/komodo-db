@@ -121,17 +121,6 @@ CREATE TABLE `KP_Interactions`(
 
 -- data pipeline tables
 
-CREATE TABLE `interactions` (
-  `seq` int(11) DEFAULT NULL,
-  `session_id` int(11) DEFAULT NULL,
-  `client_id` int(11) DEFAULT NULL,
-  `source_id` int(11) DEFAULT NULL,
-  `target_id` int(11) DEFAULT NULL,
-  `interaction_type` int(11) DEFAULT NULL,
-  `global_seq` int(11) DEFAULT NULL,
-  `capture_id` text
-);
-
 CREATE TABLE `connections` (
     `timestamp` bigint NOT NULL,
     `session_id` int NOT NULL,
