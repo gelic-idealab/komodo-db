@@ -136,31 +136,13 @@ CREATE TABLE `captures` (
     `processed` bigint DEFAULT NULL
 );
 
-CREATE TABLE `positions` (
-  `seq` float DEFAULT NULL,
-  `session_id` float DEFAULT NULL,
-  `client_id` float DEFAULT NULL,
-  `entity_id` float DEFAULT NULL,
-  `entity_type` float DEFAULT NULL,
-  `scale` float DEFAULT NULL,
-  `rotx` float DEFAULT NULL,
-  `roty` float DEFAULT NULL,
-  `rotz` float DEFAULT NULL,
-  `rotw` float DEFAULT NULL,
-  `posx` float DEFAULT NULL,
-  `posy` float DEFAULT NULL,
-  `posz` float DEFAULT NULL,
-  `global_seq` float DEFAULT NULL,
-  `capture_id` text
-);
-
-CREATE TABLE `interactions` (
-  `seq` int(11) DEFAULT NULL,
-  `session_id` int(11) DEFAULT NULL,
-  `client_id` int(11) DEFAULT NULL,
-  `source_id` int(11) DEFAULT NULL,
-  `target_id` int(11) DEFAULT NULL,
-  `interaction_type` int(11) DEFAULT NULL,
-  `global_seq` int(11) DEFAULT NULL,
-  `capture_id` text
+CREATE TABLE `data` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `capture_id` varchar(255) NOT NULL,
+    `seq` int,
+    `session_id` int,
+    `client_id` int,
+    `type` varchar(128),
+    `ts` bigint,
+    `data` json
 );
