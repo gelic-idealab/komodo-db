@@ -144,5 +144,6 @@ CREATE TABLE `data` (
     `client_id` int,
     `type` varchar(128),
     `ts` bigint,
-    `data` json
+    `data` json,
+    PRIMARY KEY (id),
 );
