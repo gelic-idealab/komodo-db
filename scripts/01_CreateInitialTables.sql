@@ -138,7 +138,11 @@ CREATE TABLE `captures` (
 
 CREATE TABLE `data` (
     `id` int NOT NULL AUTO_INCREMENT,
-    `seq` int,
+    `session_id` int,
+    `client_id` int,
+    `type` varchar(255),
     `message` json,
+    `ts` bigint,
+    `seq` int,
     PRIMARY KEY (id)
 );
