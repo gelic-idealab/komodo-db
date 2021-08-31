@@ -138,6 +138,7 @@ CREATE TABLE `captures` (
 
 CREATE TABLE `data` (
     `id` int NOT NULL AUTO_INCREMENT,
+    `capture_id` varchar(255),
     `session_id` int,
     `client_id` int,
     `type` varchar(255),
