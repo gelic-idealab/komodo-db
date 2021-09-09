@@ -14,8 +14,6 @@ services:
       - "traefik.enable=false"
     networks:
       - komodo_internal
-    ports:
-      - 3306:3306
 
 networks:
   proxy:
