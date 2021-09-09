@@ -2,13 +2,14 @@ version: '3.3'
 services:
 
   db:
-    image: mysql:5.7
+    image: mysql:latest
     container_name: komodo-db
     restart: always
     env_file: 
       - ./.env
     volumes:
       - ./scripts:/docker-entrypoint-initdb.d
+      - ./:/home
     labels:
       - "traefik.enable=false"
     networks:
