@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+
+  db:
+    labels:
+      - "traefik.enable=false"
+    networks:
+      - komodo_internal
+    ports: 
+      - 3308:3306
+
+networks:
+  komodo_internal:
+    external: true

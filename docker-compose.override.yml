@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+
+  db:
+    labels:
+      - "traefik.enable=false"
+    networks:
+      - komodo_internal
+
+networks:
+  proxy:
+    external: true
+  komodo_internal:
+    external: true
